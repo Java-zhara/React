@@ -1,13 +1,14 @@
 import React from 'react';
 import './header.css'
-// import logo from './assets';
+import nhl from './assest/nhl.jpg'
 
 export class Header extends React.Component {
     render() {
         return (
             <div className='header'>
-                {/* <img src={logo} alt='' /> */}
-                Компонент Header</div>
+                <img src={nhl} alt='nhl' />
+                <div>Компонент Header</div>
+            </div>
         )
     };
 }
