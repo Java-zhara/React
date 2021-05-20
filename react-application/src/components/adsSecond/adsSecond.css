@@ -1,0 +1,21 @@
+.adsSecond {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.adsSecond h1, .center {
+    text-align: center;
+}
+
+.adsSecond .center {
+    color: red;
+    font-size: 25px;
+}
+
+.adsSecond .bold {
+    font-weight: bold;    
+}
+
+.adsSecond .red {
+    color: red;
+}
