@@ -3,8 +3,8 @@ import './nav.css'
 
 export const Nav = () => {
     return (
-        <div className='nav'>
+        <nav className='nav'>
             <a href='#!'>Navigation</a>
-        </div>
+        </nav>
     );
 }

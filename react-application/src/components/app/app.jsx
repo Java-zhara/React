@@ -1,14 +1,25 @@
 import React from 'react';
-import { Header } from '../header';
-import { Nav } from '../nav';
+
+import { AdsFirst } from '../adsFirst';
+
+import { AdsSecond } from '../adsSecond';
+
+// import { Header } from '../header';
+
+import { Img } from '../img/img';
+
+// import { Nav } from '../nav';
+
 import './app.css'
 
 export const App = () => {
     return (
         <div className='app'>
-            <Header />
-            <Nav />            
-            Компонент App            
+            {/* <Header />
+            <Nav />  */}
+            <AdsFirst />
+            <AdsSecond />
+            <Img />           
         </div>
     );
 }
