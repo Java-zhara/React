@@ -1,0 +1,1 @@
+export { AdsSecond } from './adsSecond';

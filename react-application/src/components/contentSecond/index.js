@@ -1,0 +1,1 @@
+export { ContentSecond } from './contentSecond';

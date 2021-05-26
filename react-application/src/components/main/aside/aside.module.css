@@ -1,0 +1,8 @@
+.aside {
+  display: flex;
+  flex: 0 0 200px;
+  background-color: #8a2be2;
+  margin: 0 10px;
+  justify-content: center;
+  color: white;
+}

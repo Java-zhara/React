@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #095c5c;
+  flex: 0 0 200px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex: 0 0 200px;
+  height: 130px;
+  margin: 20px;
+  background-color: #ffa500;
+}

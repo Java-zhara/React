@@ -1,0 +1,8 @@
+.app {
+  flex-direction: column;
+  max-width: 1000px;
+  align-content: space-between;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh;
+}
