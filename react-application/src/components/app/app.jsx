@@ -1,25 +1,35 @@
 import React from 'react';
 
-import { AdsFirst } from '../adsFirst';
+// import { AdsFirst } from '../adsFirst';
 
-import { AdsSecond } from '../adsSecond';
+// import { AdsSecond } from '../adsSecond';
 
-// import { Header } from '../header';
+import { Header } from '../header';
 
-import { Img } from '../img/img';
+// import { Img } from '../img/img';
 
-// import { Nav } from '../nav';
+import { Nav } from '../nav';
 
-import './app.css'
+import { ContentFirst } from '../content/contentFirst';
+
+import { Main } from '../main';
+
+import styles from './app.module.css'
+import { ContentSecond } from '../contentSecond/contentSecond';
+import { Footer } from '../footer/footer';
 
 export const App = () => {
     return (
-        <div className='app'>
-            {/* <Header />
-            <Nav />  */}
-            <AdsFirst />
+        <div className={styles.app}>
+            <Header />
+            <Nav />
+            <ContentFirst />
+            <Main />
+            <ContentSecond />
+            <Footer />
+            {/* <AdsFirst />
             <AdsSecond />
-            <Img />           
+            <Img /> */}
         </div>
     );
 }

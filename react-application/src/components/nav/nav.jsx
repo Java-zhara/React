@@ -1,10 +1,11 @@
 import React from 'react';
-import './nav.css'
+
+import styles from './nav.module.css'
 
 export const Nav = () => {
     return (
-        <nav className='nav'>
-            <a href='#!'>Navigation</a>
+        <nav className={styles.nav}>
+            <div>nav class="top-metu"</div>
         </nav>
     );
 }

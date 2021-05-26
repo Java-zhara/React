@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  margin: 10px 0;
+  flex: 1 1 60px;
+}
+
+.article {
+  background-color: #00ffff;
+  flex: 1 1 200px;
+  margin: 0 10px;
+  height: 90px;
+}
