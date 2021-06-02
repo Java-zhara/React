@@ -1,14 +1,15 @@
-import React from 'react';
-import { Header } from '../header';
-import { Nav } from '../nav';
-import './app.css'
+import React from "react";
 
-export const App = () => {
-    return (
-        <div className='app'>
-            <Header />
-            <Nav />            
-            Компонент App            
-        </div>
-    );
-}
+import { Header } from "../header";
+import { Main } from "../main";
+
+import "./app.css";
+
+export const App = (props) => {
+  return (
+    <div className="app">
+      <Header />
+      <Main />
+    </div>
+  );
+};
