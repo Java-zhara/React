@@ -1,0 +1,22 @@
+.card {
+  width: 400px;
+  background: rgb(132, 220, 226);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.cardImg {
+  max-height: 350px;
+  max-width: 200px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+button {
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 5px;
+}
