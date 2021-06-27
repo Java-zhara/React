@@ -1,3 +1,5 @@
+import { renderAll } from './index';
+
 const DEFAULT_STATE = {
   purchases: {
     tv: 0,
@@ -25,6 +27,7 @@ export class Store {
         sumPrice: this.state.purchases.sumPrice + price,
       },
     };
+    renderAll();
     console.log("this.state: ", this.state);
   }
 
@@ -34,6 +37,7 @@ export class Store {
         ...this.state,
         isModalVisible: true,
       };
+      renderAll();
     }
   }
 
@@ -42,6 +46,7 @@ export class Store {
       ...this.state,
       isModalVisible: false,
     };
+    renderAll();
   }
 
   onClear() {

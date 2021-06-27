@@ -19,7 +19,7 @@ export const data = [
   },
   {
     title: "Стиральная машина",
-    description: "Samsung",
+    description: "LG",
     imgSrc:
       "https://cdn21vek.by/img/galleries/1053/919/preview_b/ww80r42lhfwdlp_samsung_5d5f9f5c61cb3.png",
     key: 3,
