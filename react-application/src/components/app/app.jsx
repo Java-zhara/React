@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 import { Header } from "../header";
 import { Main } from "../main";
@@ -7,9 +7,9 @@ import { SidePanel } from "../side-panel";
 import { Todo } from "../todo";
 import { Table } from "../table";
 import { ThemeContext, themes } from "../theme-context";
-import { Questions } from "../questions";
 
 import "./app.css";
+import { Accordion } from "../accordion";
 
 export const App = (props) => {
   const [theme, setTheme] = useState(themes.light);
@@ -38,7 +38,7 @@ export const App = (props) => {
               <div>ГЛАВНАЯ</div>
             </Route>
             <Route path="/catalogue">
-              <Main store={props.store} />
+              <Main />
             </Route>
             <Route path="/todo">
               <Todo />
@@ -47,7 +47,7 @@ export const App = (props) => {
               <Table />
             </Route>
             <Route path="/questions">
-              <Questions />
+              <Accordion />
             </Route>
             <Route path="*">
               <div> 404 PAGE NOT FOUND </div>
