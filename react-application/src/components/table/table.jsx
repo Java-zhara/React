@@ -1,36 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Table as AntTable, Alert, Switch, Spin } from "antd";
 
-import { fetchData } from '../../utils/fech-data';
-import './table.css'
+import { columns } from "./columns";
+
+import "./table.css";
 
 export const Table = () => {
-  const [json, setJson] = useState([]);
+  const dispatch = useDispatch();
+
   const [isTableVisible, setIsTableVisible] = useState(false);
 
-  useEffect(() => {
-    console.log('DID_MOUNT');
-    fetchData().then(data => {setJson(data)});
-  }, []);
+  const {
+    tableData: json,
+    isError,
+    isLoading,
+    errorMessage,
+  } = useSelector((state) => state.table);
 
-    return (
-      <>
-      { isTableVisible ? (
-        <table className="table">
-        <tbody>
-        { json.map(({ userId, body, title, id }) => (
-        <tr key={id} >
-          <td>{userId}</td>
-          <td>{body}</td>
-          <td>{title}</td>
-        </tr>
-      ))}
-      </tbody>
-    </table>) : (
-      <div>
-        <button type="button" onClick={() => setIsTableVisible(true)}>Показать</button>
-        </div>
+  const onButtonClick = (bool) => {
+    setIsTableVisible(bool);
+    if (bool) {
+      dispatch({ type: "GET_TABLE_DATA_REQUEST" });
+    }
+  };
+
+  return (
+    <div>
+      <Switch
+        onChange={onButtonClick}
+        checkedChildren="Скрыть данные"
+        unCheckedChildren="Показать данные"
+      />
+      {isError && (
+        <Alert
+          message="ERROR"
+          description={errorMessage}
+          type="error"
+          showIcon
+        />
       )}
-      </>
-    );
-}
-
+      {isLoading && (
+        <Spin tip="Loading...">
+          <Alert message="Подождите пока загрузятся данные" type="info" />
+        </Spin>
+      )}
+      {isTableVisible && <AntTable columns={columns} dataSource={json} />}
+    </div>
+  );
+};
