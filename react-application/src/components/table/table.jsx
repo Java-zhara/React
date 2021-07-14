@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Table as AntTable, Alert, Switch, Spin } from "antd";
+import { Table as AntTable, Alert, Switch } from "antd";
 
 import { columns } from "./columns";
 
@@ -29,23 +29,24 @@ export const Table = () => {
     <div>
       <Switch
         onChange={onButtonClick}
-        checkedChildren="Скрыть данные"
-        unCheckedChildren="Показать данные"
+        checkedChildren="Скрыть"
+        unCheckedChildren="Показать"
       />
       {isError && (
         <Alert
-          message="ERROR"
+          message="Ошибка"
           description={errorMessage}
           type="error"
           showIcon
         />
       )}
-      {isLoading && (
-        <Spin tip="Loading...">
-          <Alert message="Подождите пока загрузятся данные" type="info" />
-        </Spin>
+      {isTableVisible && (
+        <AntTable
+          columns={columns}
+          dataSource={json}
+          loading={{ tip: "Загрузка данных", spinning: isLoading }}
+        />
       )}
-      {isTableVisible && <AntTable columns={columns} dataSource={json} />}
     </div>
   );
 };
