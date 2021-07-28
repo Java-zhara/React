@@ -1,4 +1,4 @@
-import { call, put, takeLatest, delay } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 import axios from "axios";
 import { TYPES } from "../action-types";
 import { api } from "../../constants/api";
@@ -25,5 +25,5 @@ function* addUserWorker({ values }) {
 
 export function* usersWatcher() {
   yield takeLatest(TYPES.GET_USERS_REQUEST, getUsersWorker);
-  yield takeLatest(TYPES.ADD_USERS_REQUEST, addUserWorker);
+  yield takeLatest(TYPES.ADD_USER_REQUEST, addUserWorker);
 }

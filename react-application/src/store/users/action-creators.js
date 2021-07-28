@@ -15,12 +15,12 @@ export const getUsersError = (error) => ({
 });
 
 export const addUserRequest = (values) => ({
-  type: TYPES.ADD_USERS_REQUEST,
+  type: TYPES.ADD_USER_REQUEST,
   values,
 });
 
 export const addUserSuccess = (values) => ({
-  type: TYPES.ADD_USERS_SUCCESS,
+  type: TYPES.ADD_USER_SUCCESS,
   values,
 });
 

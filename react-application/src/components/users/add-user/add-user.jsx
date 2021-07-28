@@ -2,7 +2,7 @@ import React from "react";
 import { Modal, Form, Input, Button, Select } from "antd";
 import { useDispatch } from "react-redux";
 import { addUserRequest } from "../../../store/users/action-creators";
-import styles from "./add-user.module.css";
+// import styles from "./add-user.module.css";
 
 const { Option } = Select;
 
