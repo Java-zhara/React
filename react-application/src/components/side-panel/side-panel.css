@@ -1,0 +1,34 @@
+.side-panel {
+  flex: 0 0 200px;
+  display: flex;
+  flex-flow: column;
+  row-gap: 20px;
+  padding: 16px;
+  box-shadow: 0 0 4px grey;
+}
+
+.side-panel .link {
+  font-family: sans-serif;
+  color: rgb(161, 172, 163);
+  font-size: 18px;
+}
+
+.side-panel .link.active {
+  position: relative;
+}
+
+.link.active::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(160, 144, 144);
+}
+
+.history {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,10 @@
+.card {
+    background: rgb(206, 180, 180);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
