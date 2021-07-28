@@ -1,18 +1,62 @@
-.message {
+.messages {
+  flex: 1;
+} 
+
+.messages .chat-window {
+  flex: 1;
+  max-height: 70vh;
+  width: 100%;
+  overflow-y: auto;
+  background:  center / cover no-repeat url('./assets/bg-messages.jpg') ;
+  padding: 32px 88px;
+  margin-bottom: 36px;
+  border-radius: 16px;
+  box-shadow: 0 0 2px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chat-window .total-messages {
+  align-self: flex-end;
+}
+
+
+.chat-window .message {
   max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 0 5px grey;
   margin-bottom: 16px;
-  overflow: hidden;
+  background: #f8f6f6a8;
 }
 
-.head {
-  padding: 4px;
+.chat-window .message.my {
+  background: #29e74971;
+  align-self: flex-end;
+}
+
+.message .head {
+  padding: 4px 8px;
+  color: rgb(55, 125, 216);
   display: flex;
   justify-content: space-between;
-  background: rgb(51, 172, 228);
+  column-gap: 8px;
 }
 
-.text, .likes {
-  padding: 4px;
+.chat-window .head .edit-section {
+  margin: 0 8px;
+  display: flex;
+  column-gap: 8px;
+}
+
+.message .text, .likes {
+  padding: 8px;
+}
+
+.message  .likes {
+  text-align: right;
+}
+
+.edit-btn {
+  margin: 0 8px;
 }

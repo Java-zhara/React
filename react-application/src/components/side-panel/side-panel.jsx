@@ -34,12 +34,17 @@ export const SidePanel = () => {
       <NavLink className="link" to="/messages">
         ЧАТ
       </NavLink>
-      <button type="button" onClick={history.goBack}>
-        Назад
-      </button>
-      <button type="button" onClick={history.goForward}>
-        Вперед
-      </button>
+      <NavLink className="link" to="/users">
+        USERS
+      </NavLink>
+      <div className="history">
+        <button type="button" onClick={history.goBack}>
+          {"<"}
+        </button>
+        <button type="button" onClick={history.goForward}>
+          {">"}
+        </button>
+      </div>
     </div>
   );
 };
